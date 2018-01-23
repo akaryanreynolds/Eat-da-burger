@@ -58,14 +58,6 @@ function printQuestionMarks(num) {
     },
     // An example of objColVals would be {name: panther, sleepy: true}
     update: function(burgerID, cb) {
-      // var queryString = "UPDATE " + table;
-  
-      // queryString += " SET ";
-      // queryString += objToSql(objColVals);
-      // queryString += " WHERE ";
-      // queryString += condition;
-  
-      // console.log(queryString);
       connection.query('UPDATE burgers SET ? WHERE ?', [{devourer: true}, {id: burgerID}], function(err, result) {
         if (err) {
           throw err;
